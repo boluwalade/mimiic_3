@@ -1,0 +1,1233 @@
+
+
+============================== 2023-04-16 03:00:29.453901 | bac13d26-b160-4648-9006-9efb0e777562 ==============================
+[0m03:00:29.453901 [info ] [MainThread]: Running with dbt=1.4.4
+[0m03:00:29.455280 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m03:00:29.455425 [debug] [MainThread]: Tracking: tracking
+[0m03:00:29.467369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e7c6100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e7c66d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e7c65b0>]}
+[0m03:00:29.479576 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m03:00:29.479995 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m03:00:29.480196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'bac13d26-b160-4648-9006-9efb0e777562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e7c6c10>]}
+[0m03:00:29.847825 [debug] [MainThread]: 1699: static parser successfully parsed example/my_first_dbt_model.sql
+[0m03:00:29.854287 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m03:00:29.890698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bac13d26-b160-4648-9006-9efb0e777562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ea30fd0>]}
+[0m03:00:29.894973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bac13d26-b160-4648-9006-9efb0e777562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e7c6af0>]}
+[0m03:00:29.895204 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m03:00:29.895368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bac13d26-b160-4648-9006-9efb0e777562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ea4a5e0>]}
+[0m03:00:29.896152 [info ] [MainThread]: 
+[0m03:00:29.897099 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:00:29.897724 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3'
+[0m03:00:29.897921 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:00:30.912661 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m03:00:30.913372 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:00:31.144195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bac13d26-b160-4648-9006-9efb0e777562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ea7e0a0>]}
+[0m03:00:31.144955 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:00:31.145221 [info ] [MainThread]: 
+[0m03:00:31.148800 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_first_dbt_model
+[0m03:00:31.149165 [info ] [Thread-1  ]: 1 of 2 START sql table model mimiciii_clinical.my_first_dbt_model .............. [RUN]
+[0m03:00:31.149706 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_first_dbt_model'
+[0m03:00:31.149900 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_first_dbt_model
+[0m03:00:31.154789 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_first_dbt_model"
+[0m03:00:31.155503 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (compile): 2023-04-16 03:00:31.150034 => 2023-04-16 03:00:31.155443
+[0m03:00:31.155718 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_first_dbt_model
+[0m03:00:31.186557 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.my_first_dbt_model"
+[0m03:00:31.187176 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:00:31.187509 [debug] [Thread-1  ]: On model.mimiic_3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `mimiic-3`.`mimiciii_clinical`.`my_first_dbt_model`
+    
+    
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m03:00:33.732511 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:963a2c01-f91e-4af6-9d89-c0321550c8dd&page=queryresults
+[0m03:00:33.749230 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (execute): 2023-04-16 03:00:31.155845 => 2023-04-16 03:00:33.749185
+[0m03:00:33.749850 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bac13d26-b160-4648-9006-9efb0e777562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ec07ca0>]}
+[0m03:00:33.750230 [info ] [Thread-1  ]: 1 of 2 OK created sql table model mimiciii_clinical.my_first_dbt_model ......... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 2.60s]
+[0m03:00:33.751566 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_first_dbt_model
+[0m03:00:33.752061 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_second_dbt_model
+[0m03:00:33.752481 [info ] [Thread-1  ]: 2 of 2 START sql view model mimiciii_clinical.my_second_dbt_model .............. [RUN]
+[0m03:00:33.753041 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_second_dbt_model'
+[0m03:00:33.753244 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_second_dbt_model
+[0m03:00:33.755763 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_second_dbt_model"
+[0m03:00:33.756317 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (compile): 2023-04-16 03:00:33.753375 => 2023-04-16 03:00:33.756266
+[0m03:00:33.756528 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_second_dbt_model
+[0m03:00:33.775974 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.my_second_dbt_model"
+[0m03:00:33.776629 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:00:33.776876 [debug] [Thread-1  ]: On model.mimiic_3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.my_second_dbt_model"} */
+
+
+  create or replace view `mimiic-3`.`mimiciii_clinical`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `mimiic-3`.`mimiciii_clinical`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m03:00:34.646254 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:61d00a2e-a48f-408e-9a10-9f7d8c79a7d5&page=queryresults
+[0m03:00:34.649866 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (execute): 2023-04-16 03:00:33.756663 => 2023-04-16 03:00:34.649783
+[0m03:00:34.650876 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bac13d26-b160-4648-9006-9efb0e777562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ec079a0>]}
+[0m03:00:34.651405 [info ] [Thread-1  ]: 2 of 2 OK created sql view model mimiciii_clinical.my_second_dbt_model ......... [[32mCREATE VIEW (0 processed)[0m in 0.90s]
+[0m03:00:34.651753 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_second_dbt_model
+[0m03:00:34.652834 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:00:34.653309 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:00:34.653473 [debug] [MainThread]: Connection 'model.mimiic_3.my_second_dbt_model' was properly closed.
+[0m03:00:34.653651 [info ] [MainThread]: 
+[0m03:00:34.653875 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.76 seconds (4.76s).
+[0m03:00:34.654230 [debug] [MainThread]: Command end result
+[0m03:00:34.662264 [info ] [MainThread]: 
+[0m03:00:34.662719 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:00:34.662976 [info ] [MainThread]: 
+[0m03:00:34.663286 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m03:00:34.663634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ecac5e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ea0f700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ea6bd00>]}
+[0m03:00:34.663893 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-16 03:03:50.733372 | 869e745e-b651-4f36-bfea-d25ad4792064 ==============================
+[0m03:03:50.733372 [info ] [MainThread]: Running with dbt=1.4.4
+[0m03:03:50.735009 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m03:03:50.735155 [debug] [MainThread]: Tracking: tracking
+[0m03:03:50.747726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131208100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1311b27f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1311b28e0>]}
+[0m03:03:50.755555 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m03:03:50.777996 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m03:03:50.778312 [debug] [MainThread]: Partial parsing: added file: mimiic_3://models/sources.yml
+[0m03:03:50.778500 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/example/my_second_dbt_model.sql
+[0m03:03:50.787110 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m03:03:50.816675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '869e745e-b651-4f36-bfea-d25ad4792064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1314270d0>]}
+[0m03:03:50.821526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '869e745e-b651-4f36-bfea-d25ad4792064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131200df0>]}
+[0m03:03:50.821802 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m03:03:50.821986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '869e745e-b651-4f36-bfea-d25ad4792064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13132f790>]}
+[0m03:03:50.822972 [info ] [MainThread]: 
+[0m03:03:50.824045 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:03:50.824666 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m03:03:50.824888 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:03:51.737126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '869e745e-b651-4f36-bfea-d25ad4792064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131378d60>]}
+[0m03:03:51.738293 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:03:51.738730 [info ] [MainThread]: 
+[0m03:03:51.743371 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_first_dbt_model
+[0m03:03:51.744044 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_first_dbt_model'
+[0m03:03:51.744310 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_first_dbt_model
+[0m03:03:51.749844 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_first_dbt_model"
+[0m03:03:51.750359 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (compile): 2023-04-16 03:03:51.744489 => 2023-04-16 03:03:51.750296
+[0m03:03:51.750578 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_first_dbt_model
+[0m03:03:51.750768 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (execute): 2023-04-16 03:03:51.750717 => 2023-04-16 03:03:51.750738
+[0m03:03:51.752246 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_first_dbt_model
+[0m03:03:51.752512 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_second_dbt_model
+[0m03:03:51.754282 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_second_dbt_model'
+[0m03:03:51.754489 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_second_dbt_model
+[0m03:03:51.756991 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_second_dbt_model"
+[0m03:03:51.757721 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (compile): 2023-04-16 03:03:51.754624 => 2023-04-16 03:03:51.757648
+[0m03:03:51.757998 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_second_dbt_model
+[0m03:03:51.758210 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (execute): 2023-04-16 03:03:51.758162 => 2023-04-16 03:03:51.758175
+[0m03:03:51.758937 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_second_dbt_model
+[0m03:03:51.759220 [debug] [Thread-1  ]: Began running node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:03:51.759680 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710'
+[0m03:03:51.759827 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:03:51.767104 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m03:03:51.767496 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710 (compile): 2023-04-16 03:03:51.759930 => 2023-04-16 03:03:51.767464
+[0m03:03:51.767618 [debug] [Thread-1  ]: Began executing node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:03:51.767721 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710 (execute): 2023-04-16 03:03:51.767698 => 2023-04-16 03:03:51.767704
+[0m03:03:51.768019 [debug] [Thread-1  ]: Finished running node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:03:51.768156 [debug] [Thread-1  ]: Began running node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m03:03:51.768478 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.unique_my_first_dbt_model_id.16e066b321'
+[0m03:03:51.768601 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m03:03:51.771982 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.unique_my_first_dbt_model_id.16e066b321"
+[0m03:03:51.772326 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_first_dbt_model_id.16e066b321 (compile): 2023-04-16 03:03:51.768688 => 2023-04-16 03:03:51.772292
+[0m03:03:51.772455 [debug] [Thread-1  ]: Began executing node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m03:03:51.772560 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_first_dbt_model_id.16e066b321 (execute): 2023-04-16 03:03:51.772537 => 2023-04-16 03:03:51.772542
+[0m03:03:51.772914 [debug] [Thread-1  ]: Finished running node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m03:03:51.773073 [debug] [Thread-1  ]: Began running node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m03:03:51.773337 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778'
+[0m03:03:51.773454 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m03:03:51.776432 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778"
+[0m03:03:51.776811 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778 (compile): 2023-04-16 03:03:51.773809 => 2023-04-16 03:03:51.776777
+[0m03:03:51.776942 [debug] [Thread-1  ]: Began executing node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m03:03:51.777046 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778 (execute): 2023-04-16 03:03:51.777023 => 2023-04-16 03:03:51.777029
+[0m03:03:51.777358 [debug] [Thread-1  ]: Finished running node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m03:03:51.777507 [debug] [Thread-1  ]: Began running node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:03:51.777793 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493'
+[0m03:03:51.777903 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:03:51.780112 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493"
+[0m03:03:51.780407 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493 (compile): 2023-04-16 03:03:51.777981 => 2023-04-16 03:03:51.780378
+[0m03:03:51.780532 [debug] [Thread-1  ]: Began executing node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:03:51.780631 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493 (execute): 2023-04-16 03:03:51.780609 => 2023-04-16 03:03:51.780615
+[0m03:03:51.780925 [debug] [Thread-1  ]: Finished running node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:03:51.781339 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:03:51.781440 [debug] [MainThread]: Connection 'test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+[0m03:03:51.781666 [debug] [MainThread]: Command end result
+[0m03:03:51.784799 [info ] [MainThread]: Done.
+[0m03:03:51.785023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131200eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1312268b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131226970>]}
+[0m03:03:51.785173 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-16 03:09:29.366710 | d5e77b9e-f448-407b-b7d4-adcc1b71b627 ==============================
+[0m03:09:29.366710 [info ] [MainThread]: Running with dbt=1.4.4
+[0m03:09:29.368268 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m03:09:29.368450 [debug] [MainThread]: Tracking: tracking
+[0m03:09:29.378067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145807100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145807610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1458074f0>]}
+[0m03:09:29.385356 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m03:09:29.406578 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m03:09:29.406946 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/sources.yml
+[0m03:09:29.416285 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m03:09:29.439344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145845670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145971760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145971700>]}
+[0m03:09:29.439611 [debug] [MainThread]: Flushing usage events
+[0m03:10:29.471440 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m03:10:29.475304 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.mimiic_3.my_second_dbt_model' (models/example/my_second_dbt_model.sql) depends on a source named 'mimiic_iii.admissions' which was not found
+
+
+============================== 2023-04-16 03:10:53.606123 | 241b3dda-d988-4729-93b4-9a4f60495da9 ==============================
+[0m03:10:53.606123 [info ] [MainThread]: Running with dbt=1.4.4
+[0m03:10:53.607387 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m03:10:53.607555 [debug] [MainThread]: Tracking: tracking
+[0m03:10:53.617548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dcc7100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dc725e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dc72e20>]}
+[0m03:10:53.625783 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m03:10:53.646061 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m03:10:53.646457 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/sources.yml
+[0m03:10:53.654232 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m03:10:53.675803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11de18700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11df319d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11df31cd0>]}
+[0m03:10:53.676055 [debug] [MainThread]: Flushing usage events
+[0m03:11:45.394457 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m03:11:45.398679 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.mimiic_3.my_second_dbt_model' (models/example/my_second_dbt_model.sql) depends on a source named 'mimiic_iii.admissions' which was not found
+
+
+============================== 2023-04-16 03:12:27.244310 | cea50957-8c11-4a24-b4c2-7e15166c5849 ==============================
+[0m03:12:27.244310 [info ] [MainThread]: Running with dbt=1.4.4
+[0m03:12:27.245873 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m03:12:27.246054 [debug] [MainThread]: Tracking: tracking
+[0m03:12:27.258441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a587100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a587640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a587520>]}
+[0m03:12:27.265753 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m03:12:27.285357 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m03:12:27.285754 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/sources.yml
+[0m03:12:27.294237 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m03:12:27.315782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a5d86a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a7f1910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a7f1df0>]}
+[0m03:12:27.316014 [debug] [MainThread]: Flushing usage events
+[0m03:12:27.538710 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.mimiic_3.my_second_dbt_model' (models/example/my_second_dbt_model.sql) depends on a source named 'mimiic_iii.admissions' which was not found
+
+
+============================== 2023-04-16 03:12:55.976098 | b8dfb788-183a-488f-9871-716a17964572 ==============================
+[0m03:12:55.976098 [info ] [MainThread]: Running with dbt=1.4.4
+[0m03:12:55.977296 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m03:12:55.977425 [debug] [MainThread]: Tracking: tracking
+[0m03:12:55.986494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x159606100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1595b2ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1595b2340>]}
+[0m03:12:55.994915 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m03:12:56.014702 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m03:12:56.015091 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/sources.yml
+[0m03:12:56.015228 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/example/my_second_dbt_model.sql
+[0m03:12:56.023747 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m03:12:56.050120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b8dfb788-183a-488f-9871-716a17964572', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15982a0d0>]}
+[0m03:12:56.054031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b8dfb788-183a-488f-9871-716a17964572', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1596002e0>]}
+[0m03:12:56.054247 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m03:12:56.054412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b8dfb788-183a-488f-9871-716a17964572', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1596007c0>]}
+[0m03:12:56.055213 [info ] [MainThread]: 
+[0m03:12:56.056133 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:12:56.056623 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m03:12:56.056788 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:13:00.164232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b8dfb788-183a-488f-9871-716a17964572', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15977c2b0>]}
+[0m03:13:00.165979 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:13:00.166531 [info ] [MainThread]: 
+[0m03:13:00.174128 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_first_dbt_model
+[0m03:13:00.175021 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_first_dbt_model'
+[0m03:13:00.175341 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_first_dbt_model
+[0m03:13:00.179600 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_first_dbt_model"
+[0m03:13:00.180321 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (compile): 2023-04-16 03:13:00.175558 => 2023-04-16 03:13:00.180229
+[0m03:13:00.180612 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_first_dbt_model
+[0m03:13:00.180870 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (execute): 2023-04-16 03:13:00.180796 => 2023-04-16 03:13:00.180831
+[0m03:13:00.185784 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_first_dbt_model
+[0m03:13:00.186175 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_second_dbt_model
+[0m03:13:00.186993 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_second_dbt_model'
+[0m03:13:00.187250 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_second_dbt_model
+[0m03:13:00.191616 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_second_dbt_model"
+[0m03:13:00.192509 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (compile): 2023-04-16 03:13:00.187415 => 2023-04-16 03:13:00.192432
+[0m03:13:00.192825 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_second_dbt_model
+[0m03:13:00.193051 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (execute): 2023-04-16 03:13:00.193002 => 2023-04-16 03:13:00.193013
+[0m03:13:00.193762 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_second_dbt_model
+[0m03:13:00.194085 [debug] [Thread-1  ]: Began running node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:13:00.194794 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710'
+[0m03:13:00.195072 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:13:00.207033 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m03:13:00.207623 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710 (compile): 2023-04-16 03:13:00.195225 => 2023-04-16 03:13:00.207576
+[0m03:13:00.207816 [debug] [Thread-1  ]: Began executing node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:13:00.207971 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710 (execute): 2023-04-16 03:13:00.207937 => 2023-04-16 03:13:00.207945
+[0m03:13:00.208475 [debug] [Thread-1  ]: Finished running node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:13:00.208713 [debug] [Thread-1  ]: Began running node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m03:13:00.209222 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.unique_my_first_dbt_model_id.16e066b321'
+[0m03:13:00.209435 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m03:13:00.214807 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.unique_my_first_dbt_model_id.16e066b321"
+[0m03:13:00.215151 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_first_dbt_model_id.16e066b321 (compile): 2023-04-16 03:13:00.209563 => 2023-04-16 03:13:00.215117
+[0m03:13:00.215310 [debug] [Thread-1  ]: Began executing node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m03:13:00.215443 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_first_dbt_model_id.16e066b321 (execute): 2023-04-16 03:13:00.215415 => 2023-04-16 03:13:00.215420
+[0m03:13:00.215851 [debug] [Thread-1  ]: Finished running node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m03:13:00.216038 [debug] [Thread-1  ]: Began running node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m03:13:00.216405 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778'
+[0m03:13:00.216548 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m03:13:00.219668 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778"
+[0m03:13:00.220272 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778 (compile): 2023-04-16 03:13:00.216647 => 2023-04-16 03:13:00.220214
+[0m03:13:00.220483 [debug] [Thread-1  ]: Began executing node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m03:13:00.220625 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778 (execute): 2023-04-16 03:13:00.220592 => 2023-04-16 03:13:00.220601
+[0m03:13:00.221139 [debug] [Thread-1  ]: Finished running node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m03:13:00.221852 [debug] [Thread-1  ]: Began running node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:13:00.223350 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493'
+[0m03:13:00.224127 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:13:00.229126 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493"
+[0m03:13:00.230191 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493 (compile): 2023-04-16 03:13:00.224549 => 2023-04-16 03:13:00.230133
+[0m03:13:00.230389 [debug] [Thread-1  ]: Began executing node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:13:00.230529 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493 (execute): 2023-04-16 03:13:00.230497 => 2023-04-16 03:13:00.230505
+[0m03:13:00.231164 [debug] [Thread-1  ]: Finished running node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:13:00.232313 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:13:00.232476 [debug] [MainThread]: Connection 'test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+[0m03:13:00.232775 [debug] [MainThread]: Command end result
+[0m03:13:00.237117 [info ] [MainThread]: Done.
+[0m03:13:00.237537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x159838be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x159838f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1598387f0>]}
+[0m03:13:00.237744 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-16 03:13:48.553248 | 96df1967-8157-41d9-bcce-8712498dd8f2 ==============================
+[0m03:13:48.553248 [info ] [MainThread]: Running with dbt=1.4.4
+[0m03:13:48.554604 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m03:13:48.554737 [debug] [MainThread]: Tracking: tracking
+[0m03:13:48.566016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124647100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1245e8d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1245e8f40>]}
+[0m03:13:48.574763 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m03:13:48.596165 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m03:13:48.596469 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/example/my_second_dbt_model.sql
+[0m03:13:48.604771 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m03:13:48.625751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '96df1967-8157-41d9-bcce-8712498dd8f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1247fd0d0>]}
+[0m03:13:48.630334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '96df1967-8157-41d9-bcce-8712498dd8f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124642df0>]}
+[0m03:13:48.630522 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m03:13:48.630689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '96df1967-8157-41d9-bcce-8712498dd8f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124771d30>]}
+[0m03:13:48.631441 [info ] [MainThread]: 
+[0m03:13:48.632361 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:13:48.632923 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3'
+[0m03:13:48.633159 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:13:49.455545 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m03:13:49.456137 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:13:49.658719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '96df1967-8157-41d9-bcce-8712498dd8f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1247bc280>]}
+[0m03:13:49.660525 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:13:49.661187 [info ] [MainThread]: 
+[0m03:13:49.666637 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_first_dbt_model
+[0m03:13:49.667254 [info ] [Thread-1  ]: 1 of 2 START sql table model mimiciii_clinical.my_first_dbt_model .............. [RUN]
+[0m03:13:49.668544 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_first_dbt_model'
+[0m03:13:49.668905 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_first_dbt_model
+[0m03:13:49.672406 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_first_dbt_model"
+[0m03:13:49.673258 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (compile): 2023-04-16 03:13:49.669151 => 2023-04-16 03:13:49.673187
+[0m03:13:49.673432 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_first_dbt_model
+[0m03:13:49.682917 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:13:49.969802 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.my_first_dbt_model"
+[0m03:13:49.971416 [debug] [Thread-1  ]: On model.mimiic_3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `mimiic-3`.`mimiciii_clinical`.`my_first_dbt_model`
+    
+    
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m03:13:52.179661 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:cb2bce6e-4a04-48d5-9332-c4337e933df2&page=queryresults
+[0m03:13:52.207042 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (execute): 2023-04-16 03:13:49.673523 => 2023-04-16 03:13:52.206962
+[0m03:13:52.207916 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '96df1967-8157-41d9-bcce-8712498dd8f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1247a8f40>]}
+[0m03:13:52.208425 [info ] [Thread-1  ]: 1 of 2 OK created sql table model mimiciii_clinical.my_first_dbt_model ......... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 2.54s]
+[0m03:13:52.210201 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_first_dbt_model
+[0m03:13:52.210598 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_second_dbt_model
+[0m03:13:52.211090 [info ] [Thread-1  ]: 2 of 2 START sql view model mimiciii_clinical.my_second_dbt_model .............. [RUN]
+[0m03:13:52.211938 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_second_dbt_model'
+[0m03:13:52.212192 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_second_dbt_model
+[0m03:13:52.215236 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_second_dbt_model"
+[0m03:13:52.215910 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (compile): 2023-04-16 03:13:52.212356 => 2023-04-16 03:13:52.215854
+[0m03:13:52.216158 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_second_dbt_model
+[0m03:13:52.235401 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.my_second_dbt_model"
+[0m03:13:52.236177 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:13:52.236431 [debug] [Thread-1  ]: On model.mimiic_3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.my_second_dbt_model"} */
+
+
+  create or replace view `mimiic-3`.`mimiciii_clinical`.`my_second_dbt_model`
+  OPTIONS()
+  as select *
+from `physionet-data`.`mimiciii_clinical`.`admissions`
+limit 10;
+
+
+[0m03:13:53.048293 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:4ac23dc7-7f9d-4cd6-98a2-b19f317530ce&page=queryresults
+[0m03:13:53.053418 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (execute): 2023-04-16 03:13:52.216314 => 2023-04-16 03:13:53.053311
+[0m03:13:53.054791 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '96df1967-8157-41d9-bcce-8712498dd8f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1247a8ca0>]}
+[0m03:13:53.055399 [info ] [Thread-1  ]: 2 of 2 OK created sql view model mimiciii_clinical.my_second_dbt_model ......... [[32mCREATE VIEW (0 processed)[0m in 0.84s]
+[0m03:13:53.055948 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_second_dbt_model
+[0m03:13:53.057709 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:13:53.058435 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:13:53.058685 [debug] [MainThread]: Connection 'model.mimiic_3.my_second_dbt_model' was properly closed.
+[0m03:13:53.058967 [info ] [MainThread]: 
+[0m03:13:53.059367 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.43 seconds (4.43s).
+[0m03:13:53.059962 [debug] [MainThread]: Command end result
+[0m03:13:53.071357 [info ] [MainThread]: 
+[0m03:13:53.071853 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:13:53.072173 [info ] [MainThread]: 
+[0m03:13:53.072470 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m03:13:53.072899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124771d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1278fa0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1246a7220>]}
+[0m03:13:53.073231 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-16 03:18:17.900978 | a084a170-c44a-4472-bb25-069c70f31235 ==============================
+[0m03:18:17.900978 [info ] [MainThread]: Running with dbt=1.4.4
+[0m03:18:17.902481 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m03:18:17.902648 [debug] [MainThread]: Tracking: tracking
+[0m03:18:17.912636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b087100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b032820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b032490>]}
+[0m03:18:17.920764 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m03:18:17.942950 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m03:18:17.943310 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/sources.yml
+[0m03:18:17.943439 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/example/my_second_dbt_model.sql
+[0m03:18:17.951707 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m03:18:17.977882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a084a170-c44a-4472-bb25-069c70f31235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b2a40d0>]}
+[0m03:18:17.981903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a084a170-c44a-4472-bb25-069c70f31235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b081280>]}
+[0m03:18:17.982093 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m03:18:17.982258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a084a170-c44a-4472-bb25-069c70f31235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b0819d0>]}
+[0m03:18:17.983005 [info ] [MainThread]: 
+[0m03:18:17.983908 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:18:17.984449 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3'
+[0m03:18:17.984627 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:18:18.899983 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m03:18:18.900770 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:18:19.161299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a084a170-c44a-4472-bb25-069c70f31235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b081c40>]}
+[0m03:18:19.162038 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:18:19.162308 [info ] [MainThread]: 
+[0m03:18:19.166113 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_first_dbt_model
+[0m03:18:19.166497 [info ] [Thread-1  ]: 1 of 2 START sql table model mimiciii_clinical.my_first_dbt_model .............. [RUN]
+[0m03:18:19.167032 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_first_dbt_model'
+[0m03:18:19.167213 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_first_dbt_model
+[0m03:18:19.171873 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_first_dbt_model"
+[0m03:18:19.172665 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (compile): 2023-04-16 03:18:19.167330 => 2023-04-16 03:18:19.172604
+[0m03:18:19.172838 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_first_dbt_model
+[0m03:18:19.182150 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:18:19.418023 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.my_first_dbt_model"
+[0m03:18:19.419468 [debug] [Thread-1  ]: On model.mimiic_3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `mimiic-3`.`mimiciii_clinical`.`my_first_dbt_model`
+    
+    
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m03:18:21.850994 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:31b911ef-5d0c-4681-9884-e6f5f4be0af6&page=queryresults
+[0m03:18:21.879155 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (execute): 2023-04-16 03:18:19.172939 => 2023-04-16 03:18:21.879075
+[0m03:18:21.880130 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a084a170-c44a-4472-bb25-069c70f31235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b360d60>]}
+[0m03:18:21.880637 [info ] [Thread-1  ]: 1 of 2 OK created sql table model mimiciii_clinical.my_first_dbt_model ......... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 2.71s]
+[0m03:18:21.882277 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_first_dbt_model
+[0m03:18:21.882616 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_second_dbt_model
+[0m03:18:21.883063 [info ] [Thread-1  ]: 2 of 2 START sql view model mimiciii_clinical.my_second_dbt_model .............. [RUN]
+[0m03:18:21.883793 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_second_dbt_model'
+[0m03:18:21.884041 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_second_dbt_model
+[0m03:18:21.887059 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_second_dbt_model"
+[0m03:18:21.887739 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (compile): 2023-04-16 03:18:21.884200 => 2023-04-16 03:18:21.887673
+[0m03:18:21.887996 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_second_dbt_model
+[0m03:18:21.906566 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.my_second_dbt_model"
+[0m03:18:21.907181 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:18:21.907431 [debug] [Thread-1  ]: On model.mimiic_3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.my_second_dbt_model"} */
+
+
+  create or replace view `mimiic-3`.`mimiciii_clinical`.`my_second_dbt_model`
+  OPTIONS()
+  as select *
+from `physionet-data`.`mimic_iii`.`admissions`
+limit 10;
+
+
+[0m03:18:22.552128 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:545acb3e-e42d-42ab-87c7-a4db0e76e9c5&page=queryresults
+[0m03:18:22.553886 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (execute): 2023-04-16 03:18:21.888152 => 2023-04-16 03:18:22.553741
+[0m03:18:22.565025 [debug] [Thread-1  ]: Database Error in model my_second_dbt_model (models/example/my_second_dbt_model.sql)
+  Access Denied: Table physionet-data:mimic_iii.admissions: User does not have permission to query table physionet-data:mimic_iii.admissions, or perhaps it does not exist in location US.
+  compiled Code at target/run/mimiic_3/models/example/my_second_dbt_model.sql
+[0m03:18:22.565666 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a084a170-c44a-4472-bb25-069c70f31235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b3609d0>]}
+[0m03:18:22.566302 [error] [Thread-1  ]: 2 of 2 ERROR creating sql view model mimiciii_clinical.my_second_dbt_model ..... [[31mERROR[0m in 0.68s]
+[0m03:18:22.566828 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_second_dbt_model
+[0m03:18:22.568727 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:18:22.569437 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:18:22.569659 [debug] [MainThread]: Connection 'model.mimiic_3.my_second_dbt_model' was properly closed.
+[0m03:18:22.569907 [info ] [MainThread]: 
+[0m03:18:22.570241 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.59 seconds (4.59s).
+[0m03:18:22.570712 [debug] [MainThread]: Command end result
+[0m03:18:22.578840 [info ] [MainThread]: 
+[0m03:18:22.579279 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m03:18:22.579552 [info ] [MainThread]: 
+[0m03:18:22.579818 [error] [MainThread]: [33mDatabase Error in model my_second_dbt_model (models/example/my_second_dbt_model.sql)[0m
+[0m03:18:22.580068 [error] [MainThread]:   Access Denied: Table physionet-data:mimic_iii.admissions: User does not have permission to query table physionet-data:mimic_iii.admissions, or perhaps it does not exist in location US.
+[0m03:18:22.580306 [error] [MainThread]:   compiled Code at target/run/mimiic_3/models/example/my_second_dbt_model.sql
+[0m03:18:22.580546 [info ] [MainThread]: 
+[0m03:18:22.580790 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m03:18:22.581122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b1fd250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b2aeb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14b0816a0>]}
+[0m03:18:22.581393 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-16 03:19:04.255593 | 0061739f-7794-4b7f-85b6-c07b95e382c7 ==============================
+[0m03:19:04.255593 [info ] [MainThread]: Running with dbt=1.4.4
+[0m03:19:04.257012 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m03:19:04.257241 [debug] [MainThread]: Tracking: tracking
+[0m03:19:04.269120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e407100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e3b2d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e3b23d0>]}
+[0m03:19:04.279118 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m03:19:04.300017 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m03:19:04.300366 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/sources.yml
+[0m03:19:04.308415 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m03:19:04.334897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0061739f-7794-4b7f-85b6-c07b95e382c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e6299a0>]}
+[0m03:19:04.338905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0061739f-7794-4b7f-85b6-c07b95e382c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e4006d0>]}
+[0m03:19:04.339138 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m03:19:04.339304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0061739f-7794-4b7f-85b6-c07b95e382c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e400a90>]}
+[0m03:19:04.340085 [info ] [MainThread]: 
+[0m03:19:04.341093 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:19:04.341670 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3'
+[0m03:19:04.341861 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:19:05.175457 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m03:19:05.176131 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:19:05.404921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0061739f-7794-4b7f-85b6-c07b95e382c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e400b80>]}
+[0m03:19:05.406963 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:19:05.407563 [info ] [MainThread]: 
+[0m03:19:05.416783 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_first_dbt_model
+[0m03:19:05.417694 [info ] [Thread-1  ]: 1 of 2 START sql table model mimiciii_clinical.my_first_dbt_model .............. [RUN]
+[0m03:19:05.419357 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_first_dbt_model'
+[0m03:19:05.420135 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_first_dbt_model
+[0m03:19:05.428798 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_first_dbt_model"
+[0m03:19:05.429509 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (compile): 2023-04-16 03:19:05.420715 => 2023-04-16 03:19:05.429453
+[0m03:19:05.429683 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_first_dbt_model
+[0m03:19:05.450802 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:19:05.756018 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.my_first_dbt_model"
+[0m03:19:05.756905 [debug] [Thread-1  ]: On model.mimiic_3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `mimiic-3`.`mimiciii_clinical`.`my_first_dbt_model`
+    
+    
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m03:19:07.921256 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:1a42bb0b-1f05-4872-8d46-42d6156fc7a9&page=queryresults
+[0m03:19:07.956308 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (execute): 2023-04-16 03:19:05.429787 => 2023-04-16 03:19:07.956227
+[0m03:19:07.957353 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0061739f-7794-4b7f-85b6-c07b95e382c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e6e7550>]}
+[0m03:19:07.957922 [info ] [Thread-1  ]: 1 of 2 OK created sql table model mimiciii_clinical.my_first_dbt_model ......... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 2.54s]
+[0m03:19:07.959698 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_first_dbt_model
+[0m03:19:07.960081 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_second_dbt_model
+[0m03:19:07.960599 [info ] [Thread-1  ]: 2 of 2 START sql view model mimiciii_clinical.my_second_dbt_model .............. [RUN]
+[0m03:19:07.961500 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_second_dbt_model'
+[0m03:19:07.961804 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_second_dbt_model
+[0m03:19:07.965309 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_second_dbt_model"
+[0m03:19:07.966067 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (compile): 2023-04-16 03:19:07.961993 => 2023-04-16 03:19:07.965997
+[0m03:19:07.966356 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_second_dbt_model
+[0m03:19:07.986940 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.my_second_dbt_model"
+[0m03:19:07.987522 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:19:07.987810 [debug] [Thread-1  ]: On model.mimiic_3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.my_second_dbt_model"} */
+
+
+  create or replace view `mimiic-3`.`mimiciii_clinical`.`my_second_dbt_model`
+  OPTIONS()
+  as select *
+from `physionet-data`.`mimiciii_clinical`.`admissions`
+limit 10;
+
+
+[0m03:19:08.835200 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:d0145f1b-b8ba-4d9b-bea4-44b701b454ca&page=queryresults
+[0m03:19:08.839447 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (execute): 2023-04-16 03:19:07.966537 => 2023-04-16 03:19:08.839324
+[0m03:19:08.840961 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0061739f-7794-4b7f-85b6-c07b95e382c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e6e71c0>]}
+[0m03:19:08.841774 [info ] [Thread-1  ]: 2 of 2 OK created sql view model mimiciii_clinical.my_second_dbt_model ......... [[32mCREATE VIEW (0 processed)[0m in 0.88s]
+[0m03:19:08.842484 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_second_dbt_model
+[0m03:19:08.844617 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:19:08.845664 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:19:08.846040 [debug] [MainThread]: Connection 'model.mimiic_3.my_second_dbt_model' was properly closed.
+[0m03:19:08.846441 [info ] [MainThread]: 
+[0m03:19:08.846961 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.51 seconds (4.51s).
+[0m03:19:08.847858 [debug] [MainThread]: Command end result
+[0m03:19:08.863281 [info ] [MainThread]: 
+[0m03:19:08.863886 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:19:08.864289 [info ] [MainThread]: 
+[0m03:19:08.864861 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m03:19:08.865438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e633280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e466490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e637b50>]}
+[0m03:19:08.865860 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-16 05:11:24.978768 | 5e001912-cec4-4315-8d45-1f03fed90cf2 ==============================
+[0m05:11:24.978768 [info ] [MainThread]: Running with dbt=1.4.4
+[0m05:11:24.980123 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m05:11:24.980286 [debug] [MainThread]: Tracking: tracking
+[0m05:11:25.010368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13db47100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13db47670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13db47550>]}
+[0m05:11:25.022133 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m05:11:25.047143 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:11:25.047328 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:11:25.050877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5e001912-cec4-4315-8d45-1f03fed90cf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13dcc50d0>]}
+[0m05:11:25.055486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5e001912-cec4-4315-8d45-1f03fed90cf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13db9b490>]}
+[0m05:11:25.055746 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m05:11:25.055908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e001912-cec4-4315-8d45-1f03fed90cf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13db9b4c0>]}
+[0m05:11:25.056771 [info ] [MainThread]: 
+[0m05:11:25.057721 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m05:11:25.058250 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m05:11:25.058500 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:11:26.278273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e001912-cec4-4315-8d45-1f03fed90cf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13dcc5f40>]}
+[0m05:11:26.279472 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m05:11:26.279882 [info ] [MainThread]: 
+[0m05:11:26.285181 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_first_dbt_model
+[0m05:11:26.286099 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_first_dbt_model'
+[0m05:11:26.286476 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_first_dbt_model
+[0m05:11:26.290517 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_first_dbt_model"
+[0m05:11:26.291567 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (compile): 2023-04-16 05:11:26.286713 => 2023-04-16 05:11:26.291473
+[0m05:11:26.291880 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_first_dbt_model
+[0m05:11:26.292138 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (execute): 2023-04-16 05:11:26.292065 => 2023-04-16 05:11:26.292100
+[0m05:11:26.293991 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_first_dbt_model
+[0m05:11:26.294352 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_second_dbt_model
+[0m05:11:26.295092 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_second_dbt_model'
+[0m05:11:26.295316 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_second_dbt_model
+[0m05:11:26.297966 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_second_dbt_model"
+[0m05:11:26.298423 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (compile): 2023-04-16 05:11:26.295472 => 2023-04-16 05:11:26.298382
+[0m05:11:26.298622 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_second_dbt_model
+[0m05:11:26.298788 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (execute): 2023-04-16 05:11:26.298753 => 2023-04-16 05:11:26.298760
+[0m05:11:26.299304 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_second_dbt_model
+[0m05:11:26.299549 [debug] [Thread-1  ]: Began running node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m05:11:26.300248 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710'
+[0m05:11:26.300526 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m05:11:26.313943 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m05:11:26.315018 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710 (compile): 2023-04-16 05:11:26.300681 => 2023-04-16 05:11:26.314961
+[0m05:11:26.315238 [debug] [Thread-1  ]: Began executing node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m05:11:26.315404 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710 (execute): 2023-04-16 05:11:26.315368 => 2023-04-16 05:11:26.315377
+[0m05:11:26.315908 [debug] [Thread-1  ]: Finished running node test.mimiic_3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m05:11:26.316130 [debug] [Thread-1  ]: Began running node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m05:11:26.316530 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.unique_my_first_dbt_model_id.16e066b321'
+[0m05:11:26.316683 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m05:11:26.323069 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.unique_my_first_dbt_model_id.16e066b321"
+[0m05:11:26.323565 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_first_dbt_model_id.16e066b321 (compile): 2023-04-16 05:11:26.316787 => 2023-04-16 05:11:26.323523
+[0m05:11:26.323742 [debug] [Thread-1  ]: Began executing node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m05:11:26.323884 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_first_dbt_model_id.16e066b321 (execute): 2023-04-16 05:11:26.323853 => 2023-04-16 05:11:26.323861
+[0m05:11:26.324290 [debug] [Thread-1  ]: Finished running node test.mimiic_3.unique_my_first_dbt_model_id.16e066b321
+[0m05:11:26.324475 [debug] [Thread-1  ]: Began running node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m05:11:26.324887 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778'
+[0m05:11:26.325034 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m05:11:26.327820 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778"
+[0m05:11:26.328160 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778 (compile): 2023-04-16 05:11:26.325132 => 2023-04-16 05:11:26.328129
+[0m05:11:26.328306 [debug] [Thread-1  ]: Began executing node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m05:11:26.328427 [debug] [Thread-1  ]: Timing info for test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778 (execute): 2023-04-16 05:11:26.328401 => 2023-04-16 05:11:26.328407
+[0m05:11:26.328798 [debug] [Thread-1  ]: Finished running node test.mimiic_3.not_null_my_second_dbt_model_id.151b76d778
+[0m05:11:26.328975 [debug] [Thread-1  ]: Began running node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m05:11:26.329308 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493'
+[0m05:11:26.329438 [debug] [Thread-1  ]: Began compiling node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m05:11:26.332111 [debug] [Thread-1  ]: Writing injected SQL for node "test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493"
+[0m05:11:26.332656 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493 (compile): 2023-04-16 05:11:26.329527 => 2023-04-16 05:11:26.332625
+[0m05:11:26.332800 [debug] [Thread-1  ]: Began executing node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m05:11:26.332916 [debug] [Thread-1  ]: Timing info for test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493 (execute): 2023-04-16 05:11:26.332892 => 2023-04-16 05:11:26.332897
+[0m05:11:26.333278 [debug] [Thread-1  ]: Finished running node test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493
+[0m05:11:26.333785 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:11:26.333906 [debug] [MainThread]: Connection 'test.mimiic_3.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+[0m05:11:26.334185 [debug] [MainThread]: Command end result
+[0m05:11:26.337877 [info ] [MainThread]: Done.
+[0m05:11:26.338161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13dcb9820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13db9b2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13db9b250>]}
+[0m05:11:26.338335 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-16 05:16:58.297270 | 7128bd3b-6b9c-4226-bd37-9507be2100f6 ==============================
+[0m05:16:58.297270 [info ] [MainThread]: Running with dbt=1.4.4
+[0m05:16:58.299009 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m05:16:58.299219 [debug] [MainThread]: Tracking: tracking
+[0m05:16:58.311153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x132307100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x132307640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x132307520>]}
+[0m05:16:58.319411 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m05:16:58.340213 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:16:58.340384 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:16:58.343839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7128bd3b-6b9c-4226-bd37-9507be2100f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1324860d0>]}
+[0m05:16:58.347446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7128bd3b-6b9c-4226-bd37-9507be2100f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13235d460>]}
+[0m05:16:58.347652 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m05:16:58.347827 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7128bd3b-6b9c-4226-bd37-9507be2100f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13235d490>]}
+[0m05:16:58.348632 [info ] [MainThread]: 
+[0m05:16:58.349598 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m05:16:58.350186 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3'
+[0m05:16:58.350461 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:16:59.511574 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m05:16:59.512157 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m05:16:59.719257 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7128bd3b-6b9c-4226-bd37-9507be2100f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13235d0a0>]}
+[0m05:16:59.719819 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m05:16:59.720019 [info ] [MainThread]: 
+[0m05:16:59.723686 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_first_dbt_model
+[0m05:16:59.724135 [info ] [Thread-1  ]: 1 of 2 START sql table model mimiciii_clinical.my_first_dbt_model .............. [RUN]
+[0m05:16:59.724567 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_first_dbt_model'
+[0m05:16:59.724700 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_first_dbt_model
+[0m05:16:59.726735 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_first_dbt_model"
+[0m05:16:59.727242 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (compile): 2023-04-16 05:16:59.724793 => 2023-04-16 05:16:59.727185
+[0m05:16:59.727398 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_first_dbt_model
+[0m05:16:59.736441 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m05:17:00.034099 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.my_first_dbt_model"
+[0m05:17:00.035387 [debug] [Thread-1  ]: On model.mimiic_3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `mimiic-3`.`mimiciii_clinical`.`my_first_dbt_model`
+    
+    
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m05:17:02.322658 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:385b7f53-3f08-4af4-b8d0-ee7e70f538ba&page=queryresults
+[0m05:17:02.349651 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_first_dbt_model (execute): 2023-04-16 05:16:59.727478 => 2023-04-16 05:17:02.349568
+[0m05:17:02.350512 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7128bd3b-6b9c-4226-bd37-9507be2100f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x132568250>]}
+[0m05:17:02.351001 [info ] [Thread-1  ]: 1 of 2 OK created sql table model mimiciii_clinical.my_first_dbt_model ......... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 2.63s]
+[0m05:17:02.352571 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_first_dbt_model
+[0m05:17:02.352911 [debug] [Thread-1  ]: Began running node model.mimiic_3.my_second_dbt_model
+[0m05:17:02.353279 [info ] [Thread-1  ]: 2 of 2 START sql view model mimiciii_clinical.my_second_dbt_model .............. [RUN]
+[0m05:17:02.353915 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.my_second_dbt_model'
+[0m05:17:02.354141 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.my_second_dbt_model
+[0m05:17:02.356891 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.my_second_dbt_model"
+[0m05:17:02.358187 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (compile): 2023-04-16 05:17:02.354281 => 2023-04-16 05:17:02.358137
+[0m05:17:02.358407 [debug] [Thread-1  ]: Began executing node model.mimiic_3.my_second_dbt_model
+[0m05:17:02.375861 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.my_second_dbt_model"
+[0m05:17:02.376716 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m05:17:02.376948 [debug] [Thread-1  ]: On model.mimiic_3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.my_second_dbt_model"} */
+
+
+  create or replace view `mimiic-3`.`mimiciii_clinical`.`my_second_dbt_model`
+  OPTIONS()
+  as select *
+from `physionet-data`.`mimiciii_clinical`.`admissions`
+limit 10;
+
+
+[0m05:17:03.084801 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:fd198835-e195-4b2a-bfe3-631b5f7893ad&page=queryresults
+[0m05:17:03.090683 [debug] [Thread-1  ]: Timing info for model.mimiic_3.my_second_dbt_model (execute): 2023-04-16 05:17:02.358551 => 2023-04-16 05:17:03.090604
+[0m05:17:03.091647 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7128bd3b-6b9c-4226-bd37-9507be2100f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1325689a0>]}
+[0m05:17:03.092200 [info ] [Thread-1  ]: 2 of 2 OK created sql view model mimiciii_clinical.my_second_dbt_model ......... [[32mCREATE VIEW (0 processed)[0m in 0.74s]
+[0m05:17:03.092673 [debug] [Thread-1  ]: Finished running node model.mimiic_3.my_second_dbt_model
+[0m05:17:03.094050 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m05:17:03.094665 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:17:03.094875 [debug] [MainThread]: Connection 'model.mimiic_3.my_second_dbt_model' was properly closed.
+[0m05:17:03.095109 [info ] [MainThread]: 
+[0m05:17:03.095404 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.75 seconds (4.75s).
+[0m05:17:03.095833 [debug] [MainThread]: Command end result
+[0m05:17:03.104938 [info ] [MainThread]: 
+[0m05:17:03.105293 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:17:03.105525 [info ] [MainThread]: 
+[0m05:17:03.105744 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m05:17:03.106038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13235d520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13235d550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1325b1ee0>]}
+[0m05:17:03.106271 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-16 05:19:18.944164 | 3ecc0661-0099-419c-98f5-1fd54c05b74b ==============================
+[0m05:19:18.944164 [info ] [MainThread]: Running with dbt=1.4.4
+[0m05:19:18.945082 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+[0m05:19:18.945244 [debug] [MainThread]: Tracking: tracking
+[0m05:19:18.953281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117c6100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117c65b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117c6190>]}
+[0m05:19:18.953858 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m05:19:18.954107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117c6190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117c61f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117c6100>]}
+[0m05:19:18.954238 [debug] [MainThread]: Flushing usage events
+[0m05:20:18.975858 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+
+
+============================== 2023-04-23 14:04:09.816193 | 60aadc41-2ea7-4aeb-bf5a-5848b30c65af ==============================
+[0m14:04:09.816193 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:04:09.818117 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['models/admissions.sql'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m14:04:09.818334 [debug] [MainThread]: Tracking: tracking
+[0m14:04:09.833474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b747100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b6f0d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b6f0f40>]}
+[0m14:04:09.842350 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:04:09.863705 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 1 files added, 0 files changed.
+[0m14:04:09.863964 [debug] [MainThread]: Partial parsing: added file: mimiic_3://models/admissions.sql
+[0m14:04:09.864100 [debug] [MainThread]: Partial parsing: deleted file: mimiic_3://models/example/my_first_dbt_model.sql
+[0m14:04:09.864184 [debug] [MainThread]: Partial parsing: deleted file: mimiic_3://models/example/my_second_dbt_model.sql
+[0m14:04:09.872680 [debug] [MainThread]: 1699: static parser successfully parsed admissions.sql
+[0m14:04:09.881110 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.mimiic_3.example
+[0m14:04:09.884018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '60aadc41-2ea7-4aeb-bf5a-5848b30c65af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b9560d0>]}
+[0m14:04:09.888624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '60aadc41-2ea7-4aeb-bf5a-5848b30c65af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b8b2e50>]}
+[0m14:04:09.888923 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m14:04:09.889125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '60aadc41-2ea7-4aeb-bf5a-5848b30c65af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b8b2cd0>]}
+[0m14:04:09.890099 [info ] [MainThread]: 
+[0m14:04:09.891337 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:04:09.892065 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3'
+[0m14:04:09.892299 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:04:11.592872 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m14:04:11.594326 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:04:11.894671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '60aadc41-2ea7-4aeb-bf5a-5848b30c65af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b742f40>]}
+[0m14:04:11.896262 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:04:11.896859 [info ] [MainThread]: 
+[0m14:04:11.903028 [debug] [Thread-1  ]: Began running node model.mimiic_3.admissions
+[0m14:04:11.903693 [info ] [Thread-1  ]: 1 of 1 START sql view model mimiciii_clinical.admissions ....................... [RUN]
+[0m14:04:11.905135 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.admissions'
+[0m14:04:11.905560 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.admissions
+[0m14:04:11.908190 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.admissions"
+[0m14:04:11.908895 [debug] [Thread-1  ]: Timing info for model.mimiic_3.admissions (compile): 2023-04-23 14:04:11.905824 => 2023-04-23 14:04:11.908814
+[0m14:04:11.909200 [debug] [Thread-1  ]: Began executing node model.mimiic_3.admissions
+[0m14:04:11.941891 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.admissions"
+[0m14:04:11.942462 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:04:11.942893 [debug] [Thread-1  ]: On model.mimiic_3.admissions: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.admissions"} */
+
+
+  create or replace view `mimiic-3`.`mimiciii_clinical`.`admissions`
+  OPTIONS()
+  as select
+    * 
+from
+    admissions
+where
+    subject_id = 10001
+    and hadm_id = 10001;
+
+
+[0m14:04:12.355660 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Table "admissions" must be qualified with a dataset (e.g. dataset.table).')
+[0m14:04:12.796839 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:b33c4cd1-4284-4b06-8ed3-781fad3cb3b2&page=queryresults
+[0m14:04:12.798154 [debug] [Thread-1  ]: Timing info for model.mimiic_3.admissions (execute): 2023-04-23 14:04:11.909387 => 2023-04-23 14:04:12.798013
+[0m14:04:12.809392 [debug] [Thread-1  ]: Database Error in model admissions (models/admissions.sql)
+  Table "admissions" must be qualified with a dataset (e.g. dataset.table).
+  compiled Code at target/run/mimiic_3/models/admissions.sql
+[0m14:04:12.809987 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '60aadc41-2ea7-4aeb-bf5a-5848b30c65af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b9428e0>]}
+[0m14:04:12.810584 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model mimiciii_clinical.admissions .............. [[31mERROR[0m in 0.91s]
+[0m14:04:12.813163 [debug] [Thread-1  ]: Finished running node model.mimiic_3.admissions
+[0m14:04:12.814794 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:04:12.815483 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:04:12.815717 [debug] [MainThread]: Connection 'model.mimiic_3.admissions' was properly closed.
+[0m14:04:12.815962 [info ] [MainThread]: 
+[0m14:04:12.816311 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.93 seconds (2.93s).
+[0m14:04:12.816747 [debug] [MainThread]: Command end result
+[0m14:04:12.824663 [info ] [MainThread]: 
+[0m14:04:12.825203 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m14:04:12.825534 [info ] [MainThread]: 
+[0m14:04:12.825826 [error] [MainThread]: [33mDatabase Error in model admissions (models/admissions.sql)[0m
+[0m14:04:12.826075 [error] [MainThread]:   Table "admissions" must be qualified with a dataset (e.g. dataset.table).
+[0m14:04:12.826306 [error] [MainThread]:   compiled Code at target/run/mimiic_3/models/admissions.sql
+[0m14:04:12.826539 [info ] [MainThread]: 
+[0m14:04:12.826783 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m14:04:12.827117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b747cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b8b2ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b8a2d30>]}
+[0m14:04:12.827389 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-23 14:05:35.359325 | 5ced197b-d73f-4f78-83a1-dcfd810658a3 ==============================
+[0m14:05:35.359325 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:05:35.360689 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['models/admissions.sql'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m14:05:35.360860 [debug] [MainThread]: Tracking: tracking
+[0m14:05:35.370190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128788100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1287886a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128788580>]}
+[0m14:05:35.377345 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:05:35.397601 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:05:35.397908 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/admissions.sql
+[0m14:05:35.405860 [debug] [MainThread]: 1699: static parser successfully parsed admissions.sql
+[0m14:05:35.411752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1288d1d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1288e9d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1288e9d60>]}
+[0m14:05:35.411931 [debug] [MainThread]: Flushing usage events
+[0m14:05:35.610056 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.mimiic_3.admissions' (models/admissions.sql) depends on a source named 'mimiciii.admissions' which was not found
+
+
+============================== 2023-04-23 14:05:58.307534 | 2467e0b5-ad4d-42bd-9498-f2db18b72d4f ==============================
+[0m14:05:58.307534 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:05:58.308857 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m14:05:58.309014 [debug] [MainThread]: Tracking: tracking
+[0m14:05:58.321869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a847100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a7f2d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a7f2f40>]}
+[0m14:05:58.329073 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:05:58.346637 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:05:58.346929 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/admissions.sql
+[0m14:05:58.354570 [debug] [MainThread]: 1699: static parser successfully parsed admissions.sql
+[0m14:05:58.360647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a992d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a9aad60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a9aad30>]}
+[0m14:05:58.360833 [debug] [MainThread]: Flushing usage events
+[0m14:05:58.498217 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.mimiic_3.admissions' (models/admissions.sql) depends on a source named 'mimiciii.admissions' which was not found
+
+
+============================== 2023-04-23 14:06:23.070264 | 3810dc29-cc28-4cf8-938e-47233fe02c3f ==============================
+[0m14:06:23.070264 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:06:23.071615 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m14:06:23.071773 [debug] [MainThread]: Tracking: tracking
+[0m14:06:23.081282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120306100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1203066d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1203065b0>]}
+[0m14:06:23.089178 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:06:23.108563 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:06:23.108855 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/admissions.sql
+[0m14:06:23.117484 [debug] [MainThread]: 1699: static parser successfully parsed admissions.sql
+[0m14:06:23.123347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120552d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12056adc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12056ad90>]}
+[0m14:06:23.123519 [debug] [MainThread]: Flushing usage events
+[0m14:06:23.280003 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.mimiic_3.admissions' (models/admissions.sql) depends on a source named 'mimiciii_clinical.admissions' which was not found
+
+
+============================== 2023-04-23 14:08:55.671898 | 8f25b1bd-7224-4344-977a-97ada3274267 ==============================
+[0m14:08:55.671898 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:08:55.673333 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['models/admissions.sql'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m14:08:55.673501 [debug] [MainThread]: Tracking: tracking
+[0m14:08:55.684813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128ac7100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128a72490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128a72b50>]}
+[0m14:08:55.692125 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:08:55.712198 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:08:55.712484 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/admissions.sql
+[0m14:08:55.720932 [debug] [MainThread]: 1699: static parser successfully parsed admissions.sql
+[0m14:08:55.729001 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.mimiic_3.example
+[0m14:08:55.731778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8f25b1bd-7224-4344-977a-97ada3274267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128eacf40>]}
+[0m14:08:55.735748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8f25b1bd-7224-4344-977a-97ada3274267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128a72d00>]}
+[0m14:08:55.736008 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m14:08:55.736172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f25b1bd-7224-4344-977a-97ada3274267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128a8cf70>]}
+[0m14:08:55.736978 [info ] [MainThread]: 
+[0m14:08:55.737890 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:08:55.738395 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3'
+[0m14:08:55.738615 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:08:56.698327 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m14:08:56.699784 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:08:56.930611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f25b1bd-7224-4344-977a-97ada3274267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128e56f70>]}
+[0m14:08:56.931285 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:08:56.931527 [info ] [MainThread]: 
+[0m14:08:56.934644 [debug] [Thread-1  ]: Began running node model.mimiic_3.admissions
+[0m14:08:56.934929 [info ] [Thread-1  ]: 1 of 1 START sql view model mimiciii_clinical.admissions ....................... [RUN]
+[0m14:08:56.935383 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.admissions'
+[0m14:08:56.935542 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.admissions
+[0m14:08:56.937006 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.admissions"
+[0m14:08:56.937819 [debug] [Thread-1  ]: Timing info for model.mimiic_3.admissions (compile): 2023-04-23 14:08:56.935651 => 2023-04-23 14:08:56.937753
+[0m14:08:56.937982 [debug] [Thread-1  ]: Began executing node model.mimiic_3.admissions
+[0m14:08:56.955394 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.admissions"
+[0m14:08:56.955927 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:08:56.956266 [debug] [Thread-1  ]: On model.mimiic_3.admissions: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.admissions"} */
+
+
+  create or replace view `mimiic-3`.`mimiciii_clinical`.`admissions`
+  OPTIONS()
+  as select *
+from `physionet-data`.`mimiciii_clinical`.`admissions`
+limit 10;
+
+
+[0m14:08:57.956269 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:a1246298-8391-4132-8ce1-5131e27660a0&page=queryresults
+[0m14:08:57.974667 [debug] [Thread-1  ]: Timing info for model.mimiic_3.admissions (execute): 2023-04-23 14:08:56.938076 => 2023-04-23 14:08:57.974589
+[0m14:08:57.975395 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f25b1bd-7224-4344-977a-97ada3274267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128f74d90>]}
+[0m14:08:57.975801 [info ] [Thread-1  ]: 1 of 1 OK created sql view model mimiciii_clinical.admissions .................. [[32mCREATE VIEW (0 processed)[0m in 1.04s]
+[0m14:08:57.977109 [debug] [Thread-1  ]: Finished running node model.mimiic_3.admissions
+[0m14:08:57.978065 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:08:57.978482 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:08:57.978628 [debug] [MainThread]: Connection 'model.mimiic_3.admissions' was properly closed.
+[0m14:08:57.978787 [info ] [MainThread]: 
+[0m14:08:57.979017 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.24 seconds (2.24s).
+[0m14:08:57.979320 [debug] [MainThread]: Command end result
+[0m14:08:57.985443 [info ] [MainThread]: 
+[0m14:08:57.985801 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:08:57.986011 [info ] [MainThread]: 
+[0m14:08:57.986197 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m14:08:57.986491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128a8cdf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128e6c520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128e030a0>]}
+[0m14:08:57.986711 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-23 14:16:03.076073 | 6b28dc42-3a68-4ba9-86a3-c277a60be2b1 ==============================
+[0m14:16:03.076073 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:16:03.077509 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m14:16:03.077683 [debug] [MainThread]: Tracking: tracking
+[0m14:16:03.089110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x151346100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1512e8a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1512e8c10>]}
+[0m14:16:03.097104 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:16:03.116743 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:16:03.117073 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/admissions.sql
+[0m14:16:03.125676 [debug] [MainThread]: 1699: static parser successfully parsed admissions.sql
+[0m14:16:03.131505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x151591d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1515a9dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1515a9d90>]}
+[0m14:16:03.131701 [debug] [MainThread]: Flushing usage events
+[0m14:16:03.349034 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.mimiic_3.admissions' (models/admissions.sql) depends on a source named 'mimiciii_clinical.admissions' which was not found
+
+
+============================== 2023-04-23 14:16:25.022504 | 604bc1d8-9da9-4ab5-bd74-8de8cfd8675b ==============================
+[0m14:16:25.022504 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:16:25.023858 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m14:16:25.024006 [debug] [MainThread]: Tracking: tracking
+[0m14:16:25.032104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c9c6100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c971c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c9718b0>]}
+[0m14:16:25.038964 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:16:25.057325 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:16:25.057616 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/admissions.sql
+[0m14:16:25.066224 [debug] [MainThread]: 1699: static parser successfully parsed admissions.sql
+[0m14:16:25.074612 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.mimiic_3.example
+[0m14:16:25.077523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '604bc1d8-9da9-4ab5-bd74-8de8cfd8675b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ccaff40>]}
+[0m14:16:25.081814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '604bc1d8-9da9-4ab5-bd74-8de8cfd8675b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c98cfd0>]}
+[0m14:16:25.082153 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m14:16:25.082347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '604bc1d8-9da9-4ab5-bd74-8de8cfd8675b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c98cfa0>]}
+[0m14:16:25.083292 [info ] [MainThread]: 
+[0m14:16:25.084360 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:16:25.088145 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m14:16:25.088318 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:16:26.036805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '604bc1d8-9da9-4ab5-bd74-8de8cfd8675b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cc29880>]}
+[0m14:16:26.038216 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:16:26.038712 [info ] [MainThread]: 
+[0m14:16:26.044512 [debug] [Thread-1  ]: Began running node model.mimiic_3.admissions
+[0m14:16:26.045403 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.admissions'
+[0m14:16:26.045750 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.admissions
+[0m14:16:26.050011 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.admissions"
+[0m14:16:26.051188 [debug] [Thread-1  ]: Timing info for model.mimiic_3.admissions (compile): 2023-04-23 14:16:26.045980 => 2023-04-23 14:16:26.051081
+[0m14:16:26.051535 [debug] [Thread-1  ]: Began executing node model.mimiic_3.admissions
+[0m14:16:26.051821 [debug] [Thread-1  ]: Timing info for model.mimiic_3.admissions (execute): 2023-04-23 14:16:26.051743 => 2023-04-23 14:16:26.051777
+[0m14:16:26.053861 [debug] [Thread-1  ]: Finished running node model.mimiic_3.admissions
+[0m14:16:26.054710 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:16:26.054914 [debug] [MainThread]: Connection 'model.mimiic_3.admissions' was properly closed.
+[0m14:16:26.055196 [debug] [MainThread]: Command end result
+[0m14:16:26.061064 [info ] [MainThread]: Done.
+[0m14:16:26.061547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cc5f100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c9c60a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cc000a0>]}
+[0m14:16:26.061837 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-23 14:16:48.627851 | 764a4be0-e337-4e08-9c72-66a25681d7eb ==============================
+[0m14:16:48.627851 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:16:48.629201 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m14:16:48.629368 [debug] [MainThread]: Tracking: tracking
+[0m14:16:48.638111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fb08100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f9b2490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f9b2e20>]}
+[0m14:16:48.645813 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:16:48.664156 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:16:48.664362 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:16:48.664730 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.mimiic_3.example
+[0m14:16:48.668121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '764a4be0-e337-4e08-9c72-66a25681d7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fc730d0>]}
+[0m14:16:48.671279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '764a4be0-e337-4e08-9c72-66a25681d7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fc37fa0>]}
+[0m14:16:48.671446 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m14:16:48.671620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '764a4be0-e337-4e08-9c72-66a25681d7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fb9e070>]}
+[0m14:16:48.672288 [info ] [MainThread]: 
+[0m14:16:48.673172 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:16:48.673702 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3'
+[0m14:16:48.673864 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:16:49.504468 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m14:16:49.505695 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:16:49.780958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '764a4be0-e337-4e08-9c72-66a25681d7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fc5afa0>]}
+[0m14:16:49.782342 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:16:49.782820 [info ] [MainThread]: 
+[0m14:16:49.789672 [debug] [Thread-1  ]: Began running node model.mimiic_3.admissions
+[0m14:16:49.790152 [info ] [Thread-1  ]: 1 of 1 START sql view model mimiciii_clinical.admissions ....................... [RUN]
+[0m14:16:49.790754 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.admissions'
+[0m14:16:49.790925 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.admissions
+[0m14:16:49.793693 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.admissions"
+[0m14:16:49.794188 [debug] [Thread-1  ]: Timing info for model.mimiic_3.admissions (compile): 2023-04-23 14:16:49.791040 => 2023-04-23 14:16:49.794135
+[0m14:16:49.794350 [debug] [Thread-1  ]: Began executing node model.mimiic_3.admissions
+[0m14:16:49.823849 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.admissions"
+[0m14:16:49.824508 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:16:49.824999 [debug] [Thread-1  ]: On model.mimiic_3.admissions: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.admissions"} */
+
+
+  create or replace view `mimiic-3`.`mimiciii_clinical`.`admissions`
+  OPTIONS()
+  as select
+    * 
+from
+    `physionet-data`.`mimiciii_clinical`.`admissions`
+where
+    subject_id = 10001
+    and hadm_id = 10001;
+
+
+[0m14:16:50.695263 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:b93acac3-f89a-4591-8779-9e63ac5dc4a0&page=queryresults
+[0m14:16:50.718811 [debug] [Thread-1  ]: Timing info for model.mimiic_3.admissions (execute): 2023-04-23 14:16:49.794456 => 2023-04-23 14:16:50.718735
+[0m14:16:50.719639 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '764a4be0-e337-4e08-9c72-66a25681d7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fceb4c0>]}
+[0m14:16:50.720080 [info ] [Thread-1  ]: 1 of 1 OK created sql view model mimiciii_clinical.admissions .................. [[32mCREATE VIEW (0 processed)[0m in 0.93s]
+[0m14:16:50.721524 [debug] [Thread-1  ]: Finished running node model.mimiic_3.admissions
+[0m14:16:50.722665 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:16:50.723230 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:16:50.723409 [debug] [MainThread]: Connection 'model.mimiic_3.admissions' was properly closed.
+[0m14:16:50.723601 [info ] [MainThread]: 
+[0m14:16:50.723889 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.05 seconds (2.05s).
+[0m14:16:50.724259 [debug] [MainThread]: Command end result
+[0m14:16:50.735225 [info ] [MainThread]: 
+[0m14:16:50.735561 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:16:50.735764 [info ] [MainThread]: 
+[0m14:16:50.735965 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m14:16:50.736334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fb9e070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fd7cbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fd7ce50>]}
+[0m14:16:50.736584 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-23 14:17:51.566848 | da89306f-47fb-4627-81fc-4da020edade8 ==============================
+[0m14:17:51.566848 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:17:51.568618 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bolu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m14:17:51.568773 [debug] [MainThread]: Tracking: tracking
+[0m14:17:51.579856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x139188100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1391886a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x139188580>]}
+[0m14:17:51.587742 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:17:51.606473 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:17:51.606789 [debug] [MainThread]: Partial parsing: updated file: mimiic_3://models/admissions.sql
+[0m14:17:51.615479 [debug] [MainThread]: 1699: static parser successfully parsed admissions.sql
+[0m14:17:51.623538 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.mimiic_3.example
+[0m14:17:51.626355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'da89306f-47fb-4627-81fc-4da020edade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13956ffa0>]}
+[0m14:17:51.629708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'da89306f-47fb-4627-81fc-4da020edade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1391324c0>]}
+[0m14:17:51.629891 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 334 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m14:17:51.630044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'da89306f-47fb-4627-81fc-4da020edade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13914cdf0>]}
+[0m14:17:51.630706 [info ] [MainThread]: 
+[0m14:17:51.631567 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:17:51.632072 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3'
+[0m14:17:51.632236 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:17:52.526806 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_mimiic-3_mimiciii_clinical'
+[0m14:17:52.528260 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:17:52.777154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'da89306f-47fb-4627-81fc-4da020edade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13914cdf0>]}
+[0m14:17:52.778735 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:17:52.779233 [info ] [MainThread]: 
+[0m14:17:52.786600 [debug] [Thread-1  ]: Began running node model.mimiic_3.admissions
+[0m14:17:52.787247 [info ] [Thread-1  ]: 1 of 1 START sql view model mimiciii_clinical.admissions ....................... [RUN]
+[0m14:17:52.788256 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.mimiic_3.admissions'
+[0m14:17:52.788559 [debug] [Thread-1  ]: Began compiling node model.mimiic_3.admissions
+[0m14:17:52.792794 [debug] [Thread-1  ]: Writing injected SQL for node "model.mimiic_3.admissions"
+[0m14:17:52.793847 [debug] [Thread-1  ]: Timing info for model.mimiic_3.admissions (compile): 2023-04-23 14:17:52.788762 => 2023-04-23 14:17:52.793763
+[0m14:17:52.794148 [debug] [Thread-1  ]: Began executing node model.mimiic_3.admissions
+[0m14:17:52.823841 [debug] [Thread-1  ]: Writing runtime sql for node "model.mimiic_3.admissions"
+[0m14:17:52.824451 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:17:52.824853 [debug] [Thread-1  ]: On model.mimiic_3.admissions: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "mimiic_3", "target_name": "dev", "node_id": "model.mimiic_3.admissions"} */
+
+
+  create or replace view `mimiic-3`.`mimiciii_clinical`.`admissions`
+  OPTIONS()
+  as select
+    * 
+from
+    `physionet-data`.`mimiciii_clinical`.`admissions`;
+
+
+[0m14:17:53.903820 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=mimiic-3&j=bq:US:326ba667-c263-425a-9eaa-2dae4b331506&page=queryresults
+[0m14:17:53.915425 [debug] [Thread-1  ]: Timing info for model.mimiic_3.admissions (execute): 2023-04-23 14:17:52.794336 => 2023-04-23 14:17:53.915380
+[0m14:17:53.915965 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'da89306f-47fb-4627-81fc-4da020edade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1395b4c70>]}
+[0m14:17:53.916223 [info ] [Thread-1  ]: 1 of 1 OK created sql view model mimiciii_clinical.admissions .................. [[32mCREATE VIEW (0 processed)[0m in 1.13s]
+[0m14:17:53.917076 [debug] [Thread-1  ]: Finished running node model.mimiic_3.admissions
+[0m14:17:53.917877 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:17:53.918211 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:17:53.918322 [debug] [MainThread]: Connection 'model.mimiic_3.admissions' was properly closed.
+[0m14:17:53.918438 [info ] [MainThread]: 
+[0m14:17:53.918606 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.29 seconds (2.29s).
+[0m14:17:53.918823 [debug] [MainThread]: Command end result
+[0m14:17:53.922604 [info ] [MainThread]: 
+[0m14:17:53.922861 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:17:53.923013 [info ] [MainThread]: 
+[0m14:17:53.923151 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m14:17:53.923352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1394e1d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x139417040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13952efa0>]}
+[0m14:17:53.923517 [debug] [MainThread]: Flushing usage events
